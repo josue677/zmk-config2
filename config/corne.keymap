@@ -9,7 +9,7 @@
 #include <dt-bindings/zmk/bt.h>
 
 
-#define AS(keycode) &as LS(keycode) keycode
+// #define AS(keycode) &as LS(keycode) keycode
 
 / {
     chosen {
@@ -37,10 +37,10 @@
 //             | GUI | LWR | SPC |     | ENT | RSE  | BSPC |
                         display-name = "Base";
                         bindings = <
-   AS(Q) AS(W) AS(E) AS(R) AS(T)     AS(Y)   AS(U)  AS(I)     AS(O)     AS(P)
-   AS(A) AS(S) AS(D) AS(F) AS(G)     AS(H)   AS(J)  AS(K)     AS(L)     AS(SQT)
-   AS(Z) AS(X) AS(C) AS(V) AS(B)     AS(N)   AS(M)  &kp LCTL  &kp RALT  AS(DOT)
-        &kp LGUI &mo 1 &kp SPACE     AS(RET) &mo 2  &kp BSPC
+   &kb  Q &k bW &kb E &k bR &kb T     &kb Y   &kb U  &kb I     &kb O     &kb P
+   &kb A &kb S &kb D &kb F &kb G     &kb H   &kb J  &kb K     &kb L     &kb SQT
+   &kb Z &kb X &kb C &kb V &kb B     &kb N   &kb M  &kp LCTL  &kp RALT  &kb DOT
+        &kp LGUI &mo 1 &kp SPACE     &kb RET &mo 2  &kp BSPC
                         >;
                 };
 
@@ -55,7 +55,7 @@
    &kp EXCL     &kp AT       &kp HASH     &kp DLLR     &kp PRCNT        &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR
    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4     &kp LEFT  &kp DOWN  &kp UP          &kp RIGHT &trans 
    &bt BT_CLR   &trans       &trans       &trans       &trans           &trans    &trans    &trans          &trans    &trans 
-                             &kp LGUI     &trans       &kp SPACE        AS(RET)   &kp ESC   &kp TAB
+                             &kp LGUI     &trans       &kp SPACE        &kb RET   &kp ESC   &kp TAB
                         >;
                 };
 
@@ -68,10 +68,10 @@
                         display-name = "Raise";
                         bindings = <
 
-   AS(N1)    AS(N2)    AS(N3)    AS(N4)    AS(N5)        AS(N6)    AS(N7)    AS(N8)    AS(N9)   AS(N0)
-   AS(MINUS) AS(EQUAL) &kp LBRC  &kp LBKT  &kp LPAR      &kp RPAR  &kp RBKT  &kp RBRC  AS(FSLH) AS(BSLH)
-   AS(GRAVE) &trans    &trans    AS(COMMA) &kp COLON     &kp SEMI  AS(DOT)   &kp LCTRL &kp RALT &trans
-                       &kp LGUI  &kp ESC   &kp SPACE     AS(RET)   &trans    &kp TAB
+   &kb N1    &kb N2    &kb N3    &kb N4    &kb N5        &kb N6    &kb N7    &kb N8    &kb N9   &kb N0
+   &kb MINUS &kb EQUAL &kp LBRC  &kp LBKT  &kp LPAR      &kp RPAR  &kp RBKT  &kp RBRC  &kb FSLH &kb BSLH
+   &kb GRAVE &trans    &trans    &kb COMMA &kp COLON     &kp SEMI  &kb DOT   &kp LCTRL &kp RALT &trans
+                       &kp LGUI  &kp ESC   &kp SPACE     &kb RET   &trans    &kp TAB
                         >;
                 };
         };
